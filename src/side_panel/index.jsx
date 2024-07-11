@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 
 import "./styles.css";
 
-export function SidePanel() {
+export function SidePanel({onSearch, onFilter}) {
     const [teams, setTeams] = useState([]);
     useEffect(() => {
         fetch("https://66891b460ea28ca88b86fa76.mockapi.io/api/employee/team")
@@ -13,8 +13,8 @@ export function SidePanel() {
     }, []);
     return (
         <div className={"side_panel"}>
-            <input placeholder="Search employee"/>
-            <select>
+            <input placeholder="Search employee" onChange={event => onSearch(event.target.value)}/>
+            <select onChange={event => onFilter(event.target.value)}>
                 {teams.map((team) => (
                     <option key={`team-${team.id}`}>{team.name}</option>
                 ))}

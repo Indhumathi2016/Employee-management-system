@@ -1,9 +1,5 @@
 .App {
-  display: flex;
-    justify-content: start;
-    gap: 200px;
     padding: 20px;
-    align-items: center;
     height: 100%;
 }
 
