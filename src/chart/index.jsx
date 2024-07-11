@@ -28,8 +28,8 @@ export function Family({ employees }) {
         <ul >
             {employees.map((employee, index) => (
                 <li>
-                    <div key={`key-${employee.id}`}>
-                        <div className="box" ondrop={(event) => drop(event)} ondragover={(event) => allowDrop(event)} draggable="true" ondragstart={(event) => drag(event)}>
+                    <div key={`key-${employee.id}`} ondrop={(event) => drop(event)} ondragover={(event) => allowDrop(event)}>
+                        <div className="box"  draggable="true" ondragstart={(event) => drag(event)}>
                             <img src={employee.profile} alt="profile" />
                             <div className="flex">
                                 <div className="name">{employee.name}</div>
