@@ -46,4 +46,4 @@ You don't have to ever use `eject`. The curated feature set is suitable for smal
 
 ### Deployment
 
-This application is deployed in netlify, here is the link : [Employee chart](https://facebook.github.io/create-react-app/docs/deployment)
+This application is deployed in netlify, here is the link : [Employee chart](https://main--whimsical-halva-2020cd.netlify.app/)
