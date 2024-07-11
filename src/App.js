@@ -10,6 +10,7 @@ function App() {
   const [employeeTree, setEmployeeTree] = useState([]);
   useEffect(() => {
     fetchCall("Integration");
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   function fetchCall(filter) {
