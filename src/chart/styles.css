@@ -1,5 +1,6 @@
 #container {
-    width:1000px; 
+    width:1500px;
+    overflow-x: auto; 
     font-family:verdana,arial,helvetica,sans-serif;
     font-size:11px;
     text-align:center;
@@ -20,6 +21,7 @@
    margin: auto;
    width: 230px;
    border-radius: 4px;
+   cursor: grab;
  }
 
  img {

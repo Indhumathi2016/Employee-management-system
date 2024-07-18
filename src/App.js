@@ -63,20 +63,23 @@ function App() {
   }
 
   function onFilter(filterKey) {
-    // console.log(filterKey, "filterKey");
-    // if (filterKey) {
-    //   const filters = employees.filter(employee => employee.team.toLowerCase() === filterKey.toLowerCase());
-    //   setFilteredEmployees(generateData(filters));
-    //   console.log(filters, "filters");
-    // } else {
-    //   setFilteredEmployees(employeeTree);
-    // }
     fetchCall(filterKey);
+  }
+
+  function updateEmployeeChart(dragId, dropId) {
+    const changedData = employees.map(employee => {
+      console.log(employee.id, dragId, "id")
+      if(employee.id === dragId) {
+        employee.manager_id = dropId;
+      }
+      return employee;
+    });
+    setFilteredEmployees(generateData(changedData));
   }
   return (
     <div className="App">
       <SidePanel onSearch={onSearch} onFilter={onFilter} />
-      <Chart employees={filteredEmployees} />
+      <Chart employees={filteredEmployees} updateEmployeeChart={updateEmployeeChart} />
     </div>
   );
 }

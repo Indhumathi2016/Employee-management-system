@@ -1,8 +1,14 @@
 .App {
     padding: 20px;
     height: 100%;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    grid-template-columns: 22% 78%;
 }
 
 html, body, #root {
   height: 100%;
+  width: 100%;
 }
